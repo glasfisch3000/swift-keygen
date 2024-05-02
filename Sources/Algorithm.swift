@@ -16,3 +16,11 @@ extension Algorithm {
         }
     }
 }
+
+extension Algorithm {
+    func generateKey() -> any PrivateKey {
+        switch self {
+        case .ed25519: keygen_ed25519()
+        }
+    }
+}
