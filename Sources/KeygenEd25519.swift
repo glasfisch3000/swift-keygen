@@ -31,6 +31,7 @@ struct KeygenEd25519: ParsableCommand {
         switch outputFormat {
         case .base64: encoder = Base64Encoder()
         case .pem: encoder = PEMEncoder(contentType: isPrivate ? .ecPrivateKey : .publicKey)
+        case .hex: encoder = HexEncoder()
         }
         
         let url = isPrivate ? outFilePrivateKey : outFilePublicKey
