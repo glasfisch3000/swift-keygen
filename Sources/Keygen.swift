@@ -2,7 +2,12 @@ import ArgumentParser
 
 @main
 struct Keygen: ParsableCommand {
-    mutating func run() throws {
-        print("Hello, world!")
-    }
+    static var configuration = CommandConfiguration(
+        commandName: "keygen",
+        abstract: "Generate encryption or signing keys.",
+        shouldDisplay: true,
+        subcommands: [
+            KeygenEd25519.self
+        ]
+    )
 }
