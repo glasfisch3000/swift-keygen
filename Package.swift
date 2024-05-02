@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "swift-keygen",
     platforms: [
-        .macOS(.v10_13)
+        .macOS(.v10_15)
     ],
     products: [
         .executable(name: "swift-keygen", targets: ["keygen"])
