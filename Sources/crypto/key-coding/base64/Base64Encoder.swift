@@ -1,6 +1,6 @@
 import Foundation
 
-/// An encoder object that outputs base64 encoded data.
+/// An encoder that outputs base64 encoded data.
 public struct Base64Encoder: KeyEncoder {
     /// Creates a new encoder object.
     public init() { }
