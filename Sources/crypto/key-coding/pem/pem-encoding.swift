@@ -1,7 +1,7 @@
 import Foundation
 
 extension CryptoKey {
-    public func encodePEMString(as contentType: PEMContentType) throws -> String {
+    public func encodePEMString(as contentType: PEMContentType) -> String {
         let keyData = Data(self.rawRepresentation)
         let base64 = keyData.base64EncodedString()
         
@@ -12,7 +12,7 @@ extension CryptoKey {
     }
     
     public func encodePEMData(as contentType: PEMContentType) throws -> Data {
-        let stringToEncode = try encodePEMString(as: contentType)
+        let stringToEncode = encodePEMString(as: contentType)
         
         guard let encodedData = stringToEncode.data(using: .utf8) else { throw PEMEncodingError.utf8EncodingFailed }
         return encodedData
