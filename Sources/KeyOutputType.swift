@@ -1,19 +1,20 @@
 import Foundation
 
-enum KeyOutputDestination {
+/// A destination that encoded key data can be printed to.
+public enum KeyOutputDestination {
     case stdout(Descriptor?)
     case file(URL)
 }
 
 extension KeyOutputDestination {
-    enum Descriptor {
+    public enum Descriptor {
         case privateKey
         case publicKey
     }
 }
 
 extension KeyOutputDestination.Descriptor: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         switch self {
         case .privateKey: "Private Key"
         case .publicKey: "Public Key"

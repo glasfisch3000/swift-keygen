@@ -1,7 +1,9 @@
 import Foundation
 
-struct Base64Encoder: KeyEncoder {
-    init() { }
+/// An encoder object that outputs base64 encoded data.
+public struct Base64Encoder: KeyEncoder {
+    /// Creates a new encoder object.
+    public init() { }
     
     public func encodeString(key: any CryptoKey) -> String {
         let keyData = Data(key.rawRepresentation)

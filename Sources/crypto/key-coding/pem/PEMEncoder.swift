@@ -1,9 +1,12 @@
 import Foundation
 
+/// An encoder that outputs PEM-formatted data.
 public struct PEMEncoder: KeyEncoder {
-    var contentType: PEMContentType
+    /// The type identifier of the encoded keys.
+    public var contentType: PEMContentType
     
-    init(contentType: PEMContentType) {
+    /// Creates a new encoder object with a specified content type.
+    public init(contentType: PEMContentType) {
         self.contentType = contentType
     }
 }

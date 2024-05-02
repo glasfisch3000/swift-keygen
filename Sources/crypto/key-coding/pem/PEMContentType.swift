@@ -1,3 +1,4 @@
+/// An cryptographic key type identifier viable for use in the PEM key format.
 public enum PEMContentType: String {
     case anyPrivateKey = "ANY PRIVATE KEY"
     case certificate = "CERTIFICATE"

@@ -1,4 +1,5 @@
-func printKey(_ key: any CryptoKey, with encoder: any KeyEncoder, to destination: KeyOutputDestination) throws {
+/// Outputs a key with a given encoding format to a specified destination.
+public func printKey(_ key: any CryptoKey, with encoder: any KeyEncoder, to destination: KeyOutputDestination) throws {
     switch destination {
     case .stdout(let descriptor):
         if let descriptor = descriptor {
