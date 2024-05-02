@@ -20,5 +20,6 @@ internal func keyread_private_ed25519(url: URL) throws -> Curve25519.Signing.Pri
 fileprivate let pemContentTypes: [PEMContentType] = [.privateKey, .ecPrivateKey, .anyPrivateKey]
 fileprivate let defaultDecoders: [any KeyDecoder] = [
     PEMDecoder(contentTypes: pemContentTypes),
+    HexDecoder(),
     Base64Decoder()
 ]
