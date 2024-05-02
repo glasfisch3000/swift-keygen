@@ -1,0 +1,10 @@
+# macOS Finder config data
+.DS_Store
+
+# Xcode data
+/.build
+/Packages
+xcuserdata/
+DerivedData/
+.swiftpm/
+.netrc
