@@ -7,7 +7,7 @@ struct KeygenEd25519: ParsableCommand {
         commandName: "ed25519"
     )
     
-    @Option(help: "(Optional) The private key file to read from.") var source: URL?
+    @Option(name: [.short, .long], help: "(Optional) The private key file to read from.") var source: URL?
     
     @Option(name: [.customShort("f"), .customLong("format")], help: "Output key encoding format.") var outputFormat: ParsableKeyEncoding = .base64
     
