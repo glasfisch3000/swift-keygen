@@ -7,6 +7,7 @@ let package = Package(
     name: "swift-keygen",
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.2.0"),
+        .package(url: "https://github.com/apple/swift-crypto.git", from: "3.3.0")
     ],
     targets: [
         
