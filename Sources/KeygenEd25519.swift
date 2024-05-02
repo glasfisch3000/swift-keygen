@@ -3,6 +3,10 @@ import ArgumentParser
 import Crypto
 
 struct KeygenEd25519: ParsableCommand {
+    static var configuration = CommandConfiguration(
+        commandName: "ed25519"
+    )
+    
     @Option(name: [.customShort("f"), .long]) var outputFormat: ParsableKeyEncoding = .base64
     
     @Option(name: [.customLong("outPriv", withSingleDash: true)], completion: .file()) var outFilePrivateKey: URL?
