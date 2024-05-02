@@ -27,12 +27,13 @@ struct KeygenEd25519: ParsableCommand {
         case .pem: encoder = PEMEncoder(contentType: isPrivate ? .ecPrivateKey : .publicKey)
         }
         
-        let destination: KeyOutputDestination = if let url = outFilePrivateKey {
-            .file(url)
+        let url = isPrivate ? outFilePrivateKey : outFilePublicKey
+        let destination = if let url = url {
+            KeyOutputDestination.file(url)
         } else if withDescriptor {
-            .stdout(isPrivate ? .privateKey : .publicKey)
+            KeyOutputDestination.stdout(isPrivate ? .privateKey : .publicKey)
         } else {
-            .stdout(nil)
+            KeyOutputDestination.stdout(nil)
         }
         
         try printKey(key, with: encoder, to: destination)
