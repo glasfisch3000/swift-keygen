@@ -12,6 +12,7 @@ public protocol PrivateKey: CryptoKey {
 }
 
 
+// default implementations
 extension CryptoKey {
     public var rawValue: RawValue { rawRepresentation }
     
