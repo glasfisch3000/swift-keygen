@@ -31,3 +31,7 @@ public enum PEMContentType: String {
 
 extension PEMContentType: Hashable { }
 extension PEMContentType: Codable { }
+
+extension PEMContentType: Identifiable {
+    public var id: String { rawValue }
+}
