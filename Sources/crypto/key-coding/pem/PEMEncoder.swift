@@ -1,6 +1,6 @@
 import Foundation
 
-public struct PEMEncoder {
+public struct PEMEncoder: KeyEncoder {
     var contentType: PEMContentType
     
     init(contentType: PEMContentType) {

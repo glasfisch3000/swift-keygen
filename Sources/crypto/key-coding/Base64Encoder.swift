@@ -1,6 +1,6 @@
 import Foundation
 
-struct Base64Encoder {
+struct Base64Encoder: KeyEncoder {
     init() { }
     
     public func encodeString(key: any CryptoKey) -> String {
