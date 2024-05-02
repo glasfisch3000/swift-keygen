@@ -25,7 +25,7 @@ extension PEMEncoder {
     public func encodeData(key: any CryptoKey) throws -> Data {
         let stringToEncode = encodeString(key: key)
         
-        guard let encodedData = stringToEncode.data(using: .utf8) else { throw PEMEncodingError.utf8EncodingFailed }
+        guard let encodedData = stringToEncode.data(using: .utf8) else { throw EncodingError.utf8EncodingFailed }
         return encodedData
     }
 }
