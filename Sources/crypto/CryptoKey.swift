@@ -1,7 +1,7 @@
 import Foundation
 
 /// A cryptographic key, representable as a `DataProtocol` type.
-public protocol CryptoKey: RawRepresentable where RawValue: DataProtocol {
+public protocol CryptoKey: RawRepresentable where RawValue == Data {
     /// Provides access to the underlying raw data.
     var rawRepresentation: RawValue { get }
     
